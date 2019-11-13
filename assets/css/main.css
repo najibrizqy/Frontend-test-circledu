@@ -1,0 +1,89 @@
+.notification-panel {
+  background-color: rgb(241, 241, 241);
+  min-height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.panel-text {
+  text-align: left;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+  color: blue;
+}
+
+.btn {
+  display: inline-block;
+  padding: 9px 17px;
+  padding-top: 7px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #5e5e5e;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: #d1dade;
+  -webkit-border-radius: 3px;
+  border: none;
+  text-shadow: none;
+  box-shadow: none;
+  transition: all 0.12s linear 0s !important;
+  font: 14px/20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.btn-panel {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+header {
+  height: 660px;
+  background-image: url("../img/background.jpg");
+  background-size: cover;
+  background-position-y: -150px;
+}
+
+.logo {
+  position: absolute;
+  margin: 20px;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(2, 32, 78, 0.69);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-text {
+  color: #fff;
+  text-align: center;
+}
+
+.name {
+  font-size: 26px;
+}
+
+.inform {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.contact {
+  font-size: 17px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact span {
+  display: inline-block;
+}
