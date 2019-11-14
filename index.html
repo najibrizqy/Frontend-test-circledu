@@ -6,26 +6,33 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/layout.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/fontawesome/css/all.min.css"
+    />
 
-    <title>Document</title>
+    <title>
+      Najibullah Rizqy F | Circledu.com Front-end Developer Entry Test
+    </title>
   </head>
   <body>
-    <div class="notification-panel">
-      <div class="col-md-5 panel-text">
+    <div id="notification-panel">
+      <div class="col-md-5 col-sm-7 col-xs-12  panel-text" id="panel-text">
         By accessing and using this website, you acknowledge that you have read
         and understand our
         <a href="javascript:void(0)">Cookie Policy</a>,
         <a href="javascript:void(0)">Privacy Policy</a>, and our
         <a href="javascript:void(0)">Terms of Service</a>.
       </div>
-      <button class="btn btn-panel">
+      <button class="btn btn-panel" onclick="slideUp()" id="panel-btn">
         Got it
       </button>
     </div>
     <header>
       <img src="assets/img/logo.png" width="45" height="50" class="logo" />
       <div class="overlay">
-        <div class="col-md-5 header-text">
+        <div class="col-md-5 col-sm-6 col-xs-10 header-text">
           <div class="name">Hello! I'm Najibullah Rizqy F</div>
           <div class="inform">Consult, Design, and Develop Websites</div>
           <div class="col-md-12 contact">
@@ -36,5 +43,154 @@
         </div>
       </div>
     </header>
+    <main>
+      <div class="container-fluid">
+        <div class="wrap">
+          <div class="col-md-6 title">
+            <span class="title-text">How Can I Help You?</span>
+            <div class="title-desc">
+              <span
+                >Our work then targeted, best practices outcomes social
+                innovation synergy.</span
+              >
+              <span
+                >Venture philanthropy, revolutionary inclusive policymaker
+                relief.User-centered</span
+              >
+              <span>program areas scale.</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12 content">
+          <div class="card">
+            <div class="card-title">
+              <span>Consult</span>
+              <i class="fas fa-comments icon"></i>
+            </div>
+            <div class="card-body">
+              Co-create, design thinking; strengthen infrastructure resist
+              granular. Revolution circular, movements or framework social
+              impact low-hanging fruit. Save the world compelling revolutionary
+              progress.
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-title">
+              <span>Design</span>
+              <i class="fas fa-paint-brush icon"></i>
+            </div>
+            <div class="card-body">
+              Policymaker collaborates collective impact humanitarian shared
+              value vocabulary inspire issue outcomes agile. Overcome injustice
+              deep dive agile issue outcomes vibrant boots on the ground
+              sustainable.
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-title">
+              <span>Develop</span>
+              <i class="fas fa-cubes icon"></i>
+            </div>
+            <div class="card-body">
+              Revolutionary circular, movements a or impact framework social
+              impact low- hanging. Save the compelling revolutionary inspire
+              progress. Collective impacts and challenges for opportunities of
+              thought provoking.
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-title">
+              <span>Marketing</span>
+              <i class="fas fa-bullhorn icon"></i>
+            </div>
+            <div class="card-body">
+              Peaceful; vibrant paradigm, collaborative cities. Shared
+              vocabulary agile, replicable, effective altruism youth. Mobilize
+              commitment to overcome injustice resilient, uplift social
+              transparent effective.
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-title">
+              <span>Manage</span>
+              <i class="fas fa-stream icon"></i>
+            </div>
+            <div class="card-body">
+              Change-makers innovation or shared unit of analysis. Overcome
+              injustice outcomes strategize vibrant boots on the ground
+              sustainable. Optimism, effective altruism invest optimism
+              corporate social.
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-title">
+              <span>Evolve</span>
+              <i class="fas fa-chart-line icon"></i>
+            </div>
+            <div class="card-body">
+              Activate catalyze and impact contextualize humanitarian. Unit of
+              analysis overcome injustice storytelling altruism. Thought
+              leadership mass incarceration. Outcomes big data, fairness, social
+              game-changer.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="newsletter">
+        <i class="fas fa-times close" onclick="slideDown()"></i>
+        <div class="news-title">
+          Get latest updates in web technologies
+        </div>
+        <div class="news-desc">
+          I write articles related to web technologies, such as design trends,
+          development tools, UI/UX case studies and reviews, and more. Sign up
+          to my newsletter to get them all.
+        </div>
+        <div class="news-form">
+          <input type="text" class="input" placeholder="Email address" />
+          <button class="btn btn-warning">Count me in!</button>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer">
+        <div class="footer-text">
+          &copy; 2019 Najibullah Rizqy F. All rights reserved
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function(event) {
+        var oneofthird = document.body.scrollHeight / 3;
+        var elem = document.getElementById("newsletter");
+        var date = new Date();
+        var x = setInterval(function() {
+          var getDeadLine = localStorage.getItem("deadline");
+          var t = new Date(getDeadLine) - date;
+          localStorage.setItem("time", t);
+          if (t > 0) {
+            clearInterval(x);
+            elem.style.display = "none";
+          } else {
+            elem.style.display = "block";
+          }
+        }, 1000);
+
+        var time = localStorage.getItem("time");
+        if (time < 1) {
+          window.onscroll = testScroll;
+        }
+
+        function testScroll() {
+          if ((window.pageYOffset = oneofthird)) {
+            elem.style.transition = "all 1s ease-in-out";
+            elem.style.marginBottom = "0px";
+          }
+        }
+      });
+    </script>
+    <script src="assets/js/main.js"></script>
   </body>
 </html>
